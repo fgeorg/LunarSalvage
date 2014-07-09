@@ -1,13 +1,10 @@
 ﻿using UnityEngine;
 
-public class Follower : MonoBehaviour {
+public class MouseFollower : MonoBehaviour {
 	private Vector3 mousePosition;
-	private float moveSpeed = 0.1f;
-//	private Rigidbody rigidbody;
 
 	// Use this for initialization
 	void Start () {
-//		rigidbody = GetComponent(Rigidbody);
 	}
 	
 	void FixedUpdate () {
@@ -16,7 +13,12 @@ public class Follower : MonoBehaviour {
 			mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
 			Vector3 relativePosition = mousePosition - transform.position;
 			Vector3 force = new Vector3(relativePosition.x, relativePosition.y, 0);
-			rigidbody2D.AddForce(force);
+			if (force.sqrMagnitude > 0)
+			{
+				force.Normalize();
+				force *= 40;
+				rigidbody2D.AddForce(force);
+			}
 //			print(mousePosition + " " + force);
 
 
