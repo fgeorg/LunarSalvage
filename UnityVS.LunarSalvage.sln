@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.LunarSalvage.CSharp", "UnityVS.LunarSalvage.CSharp.csproj", "{0611C57F-2D58-1005-3CE1-D8CD51996326}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.LunarSalvage.CSharp.Editor", "UnityVS.LunarSalvage.CSharp.Editor.csproj", "{8C5A2957-D9AB-89BF-57A3-7150039CDD39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{0611C57F-2D58-1005-3CE1-D8CD51996326}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0611C57F-2D58-1005-3CE1-D8CD51996326}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0611C57F-2D58-1005-3CE1-D8CD51996326}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C5A2957-D9AB-89BF-57A3-7150039CDD39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C5A2957-D9AB-89BF-57A3-7150039CDD39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C5A2957-D9AB-89BF-57A3-7150039CDD39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C5A2957-D9AB-89BF-57A3-7150039CDD39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
