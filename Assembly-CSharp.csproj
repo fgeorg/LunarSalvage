@@ -73,6 +73,7 @@
      <Compile Include="Assets\Ferr\2DTerrain\Scripts\LibTessDotNet\Tess.cs" />
      <Compile Include="Assets\Ferr\Common\Ferr_Color.cs" />
      <Compile Include="Assets\Ferr\Common\Ferr_JSON.cs" />
+     <Compile Include="Assets\GameGUI.cs" />
      <Compile Include="Assets\GameInfo.cs" />
      <Compile Include="Assets\Images\CrashTrigger.cs" />
      <Compile Include="Assets\Images\SavedObjectTrigger.cs" />

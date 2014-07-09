@@ -10,6 +10,7 @@ public class CameraPanning : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		if (player == null) return;
 		Vector2 curPos = new Vector2(camera.transform.position.x, camera.transform.position.y);
 		Vector2 playerPos = new Vector2(player.transform.position.x, player.transform.position.y - 5);
 		Vector2 diff = playerPos - curPos;
