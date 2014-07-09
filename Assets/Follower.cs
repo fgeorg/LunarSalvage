@@ -14,7 +14,7 @@ public class Follower : MonoBehaviour {
 		if (Input.GetMouseButton(0)) {
 			mousePosition = Input.mousePosition;
 			mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-			Vector3 relativePosition = transform.position - mousePosition;
+			Vector3 relativePosition = mousePosition - transform.position;
 			Vector3 force = new Vector3(relativePosition.x, relativePosition.y, 0);
 			rigidbody2D.AddForce(force);
 //			print(mousePosition + " " + force);
