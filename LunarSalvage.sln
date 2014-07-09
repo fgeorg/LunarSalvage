@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{94DFBF91-6AD0-0943-1AAF-F09861E33856}") = "LunarSalvage", "Assembly-CSharp.csproj", "{B8D8AC0E-8931-E4EA-1525-B631376F2B9E}"
 EndProject
+Project("{94DFBF91-6AD0-0943-1AAF-F09861E33856}") = "LunarSalvage", "Assembly-CSharp-Editor.csproj", "{A5B3FF7D-A2C3-8F60-59E2-160EF31BDBA4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,11 +15,15 @@ Global
 		{B8D8AC0E-8931-E4EA-1525-B631376F2B9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8D8AC0E-8931-E4EA-1525-B631376F2B9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8D8AC0E-8931-E4EA-1525-B631376F2B9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5B3FF7D-A2C3-8F60-59E2-160EF31BDBA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5B3FF7D-A2C3-8F60-59E2-160EF31BDBA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5B3FF7D-A2C3-8F60-59E2-160EF31BDBA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5B3FF7D-A2C3-8F60-59E2-160EF31BDBA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-		GlobalSection(MonoDevelopProperties) = preSolution
+				GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
