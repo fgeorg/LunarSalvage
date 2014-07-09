@@ -21,8 +21,9 @@ public class GameGUI : MonoBehaviour {
 				Time.timeScale = 1;
 			}
 			
-			if(GUI.Button(new Rect(20,70,80,20), "Quit")) {
-				//Application.LoadLevel(2);
+			if(GUI.Button(new Rect(20,70,80,20), "Restart")) {
+				Application.LoadLevel("Level");
+				Time.timeScale = 1;
 			}
 			break;
 		case 1: // playing
@@ -34,7 +35,8 @@ public class GameGUI : MonoBehaviour {
 			break;
 		case 2: // won
 			GUI.Box(new Rect(10,10,100,90), "You Won!");
-			if(GUI.Button(new Rect(20,40,80,20), "Restart")) {
+			if(GUI.Button(new Rect(20,40,80,20), "Again!")) {
+				Application.LoadLevel("Level");
 			}
 			
 			if(GUI.Button(new Rect(20,70,80,20), "Quit")) {
@@ -44,8 +46,8 @@ public class GameGUI : MonoBehaviour {
 
 		case 3: // lost
 			GUI.Box(new Rect(10,10,100,90), "You Lost!");
-			if(GUI.Button(new Rect(20,40,80,20), "Restart")) {
-				//Application.LoadLevel(1);
+			if(GUI.Button(new Rect(20,40,80,20), "Retry")) {
+				Application.LoadLevel("Level");
 			}
 			
 			if(GUI.Button(new Rect(20,70,80,20), "Quit")) {
