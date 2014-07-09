@@ -16,7 +16,7 @@ public class MouseFollower : MonoBehaviour {
 			if (force.sqrMagnitude > 0)
 			{
 				force.Normalize();
-				force *= 40;
+				force *= 30;
 				rigidbody2D.AddForce(force);
 			}
 //			print(mousePosition + " " + force);

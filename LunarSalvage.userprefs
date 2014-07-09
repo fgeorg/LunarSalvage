@@ -1,8 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MouseFollower.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/CameraPanning.cs">
     <Files>
-      <File FileName="Assets/MouseFollower.cs" Line="5" Column="1" />
+      <File FileName="Assets/MouseFollower.cs" Line="16" Column="31" />
+      <File FileName="Assets/CameraPanning.cs" Line="22" Column="80" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
