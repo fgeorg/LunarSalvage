@@ -1,26 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TerrainTrigger : MonoBehaviour {
+public class CrashTrigger : MonoBehaviour {
 
 	[SerializeField] public GameInfo gameInfo;
-	
+	[SerializeField] public GameObject explosionPrefab;
 	void OnStart()
 	{
 		
 	}
 	
-	
-	
 	void OnCollisionEnter2D (Collision2D other)
 	{
-		Debug.Log("HIT!");
-		
-		if(other.gameObject.name == "Magnet"|| other.gameObject.name == "Spaceship" )
-		{
-			
-			gameInfo.gameStatus = 3;	
-		}
+		gameInfo.gameStatus = 3;	
+//		ParticleSystem ps = GetComponent<ParticleSystem>();
+//		ps.Play ();
+		Instantiate(explosionPrefab, transform.position, transform.rotation);
+//		explosion.transform.position = gameObject.transform.position;
+		Destroy (gameObject);
+		Destroy (this);
 	}
 	
 	void OnGUI () {

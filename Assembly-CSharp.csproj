@@ -74,8 +74,8 @@
      <Compile Include="Assets\Ferr\Common\Ferr_Color.cs" />
      <Compile Include="Assets\Ferr\Common\Ferr_JSON.cs" />
      <Compile Include="Assets\GameInfo.cs" />
+     <Compile Include="Assets\Images\CrashTrigger.cs" />
      <Compile Include="Assets\Images\SavedObjectTrigger.cs" />
-     <Compile Include="Assets\Images\TerrainTrigger.cs" />
      <Compile Include="Assets\Magnetic.cs" />
      <Compile Include="Assets\MouseFollower.cs" />
      <None Include="Assets\Ferr\2DTerrain\Examples\Assets\Materials\UnitColoredTransparent.shader" />

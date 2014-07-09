@@ -10,16 +10,18 @@ public class SavedObjectTrigger : MonoBehaviour
 	
 	}
 
-
-
 	void OnCollisionEnter2D (Collision2D other)
 	{
 		Debug.Log("HIT!");
 
-		if(other.gameObject.tag == "SavedObject")
+		if(other.gameObject.name == "Junk")
 		{
-
-			gameInfo.gameStatus = 2;	
+			Destroy(other.gameObject);
+			gameInfo.nJunkCollected++;
+			if (gameInfo.nJunkCollected >= 3)
+			{
+				gameInfo.gameStatus = 2;	
+			}
 		}
 	}
 
@@ -38,7 +40,5 @@ public class SavedObjectTrigger : MonoBehaviour
 				//Application.LoadLevel(2);
 			}
 		}
-
-
 	}
 }
