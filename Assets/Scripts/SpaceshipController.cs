@@ -24,6 +24,9 @@ public class SpaceshipController : MonoBehaviour {
 		{
 			force += new Vector3(-10, 20, 0);
 		}
+		leftThruster.thrust = inputParser.leftThrust;
+		rightThruster.thrust = inputParser.rightThrust;
+
 		rigidbody2D.AddForce(force);
 	}
 
