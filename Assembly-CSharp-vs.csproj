@@ -81,6 +81,7 @@
      <Compile Include="Assets\Scripts\SavedObjectTrigger.cs" />
      <Compile Include="Assets\Scripts\SortingOrder.cs" />
      <Compile Include="Assets\Scripts\SpaceshipController.cs" />
+     <Compile Include="Assets\Scripts\StarTwinkle.cs" />
      <Compile Include="Assets\Scripts\ThrusterRenderer.cs" />
      <Compile Include="Assets\StartPlattform.cs" />
      <None Include="Assets\Ferr\2DTerrain\Examples\Assets\Materials\UnitColoredTransparent.shader" />
