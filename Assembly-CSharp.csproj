@@ -73,6 +73,7 @@
      <Compile Include="Assets\Ferr\Common\Ferr_Color.cs" />
      <Compile Include="Assets\Ferr\Common\Ferr_JSON.cs" />
      <Compile Include="Assets\Scripts\BackgroundParallax.cs" />
+     <Compile Include="Assets\Scripts\CableRenderer.cs" />
      <Compile Include="Assets\Scripts\CameraPanning.cs" />
      <Compile Include="Assets\Scripts\GameGUI.cs" />
      <Compile Include="Assets\Scripts\GameInfo.cs" />
