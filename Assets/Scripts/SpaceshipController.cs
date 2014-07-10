@@ -2,26 +2,21 @@
 using System.Collections;
 
 public class SpaceshipController : MonoBehaviour {
-
-<<<<<<< Updated upstream
+	
 	public GameInfo gameInfo;
 	public GameObject explosionPrefab;
 	public InputParser inputParser;
 	public ThrusterRenderer leftThruster;
 	public ThrusterRenderer rightThruster;
-=======
 	[SerializeField] public GameInfo gameInfo;
 	[SerializeField] public GameObject explosionPrefab;
 
 	[SerializeField] private bool inTakeOffZone = true;
->>>>>>> Stashed changes
-
 	void OnStart()
 	{
 		
 	}
-
-<<<<<<< Updated upstream
+	
 	void FixedUpdate() {
 		Vector3 force = new Vector3();
 		if (inputParser.leftThrust > 0)
@@ -34,8 +29,7 @@ public class SpaceshipController : MonoBehaviour {
 		}
 		rigidbody2D.AddForce(force);
 	}
-
-=======
+	
 	void OnTriggerEnter2D (Collider2D other) {
 		
 		if (other.gameObject.name == "TakeOffZone" && inTakeOffZone != true) 
@@ -59,8 +53,7 @@ public class SpaceshipController : MonoBehaviour {
 		
 	}
 
-	
->>>>>>> Stashed changes
+
 	void OnCollisionEnter2D (Collision2D other)
 	{
 
