@@ -14,7 +14,7 @@ public class Magnetic : MonoBehaviour {
 		// force is relative to the inverse square of the distance
 		if (diff.sqrMagnitude > 0)
 		{
-			float magnitude = 40.0f * 1.0f / (diff.sqrMagnitude);
+			float magnitude = 150.0f * 1.0f / (diff.sqrMagnitude);
 			Vector2 force = diff.normalized * magnitude;
 			rigidbody2D.AddForce(force);
 			magnet.rigidbody2D.AddForce(-force);
