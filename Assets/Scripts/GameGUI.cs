@@ -47,7 +47,7 @@ public class GameGUI : MonoBehaviour {
 		case 3: // lost
 			GUI.Box(new Rect(10,10,100,90), "You Lost!");
 			if(GUI.Button(new Rect(20,40,80,20), "Retry")) {
-				Application.LoadLevel("Level");
+				Application.LoadLevel("Level2");
 			}
 			
 			if(GUI.Button(new Rect(20,70,80,20), "Quit")) {
