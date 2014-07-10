@@ -9,7 +9,7 @@ public class SpaceshipController : MonoBehaviour {
 	public ThrusterRenderer leftThruster;
 	public ThrusterRenderer rightThruster;
 
-	[SerializeField] private bool inTakeOffZone = true;
+	public bool inSaveZone = true;
 	void OnStart()
 	{
 		
@@ -34,10 +34,10 @@ public class SpaceshipController : MonoBehaviour {
 	
 	void OnTriggerEnter2D (Collider2D other) {
 		
-		if (other.gameObject.name == "TakeOffZone" && inTakeOffZone != true) 
+		if (other.gameObject.name == "LandingZone" && inSaveZone != true) 
 		{
 			Debug.Log("Entered SaveZone");
-			inTakeOffZone = true; 
+			inSaveZone = true; 
 			return;
 		} 
 
@@ -46,10 +46,10 @@ public class SpaceshipController : MonoBehaviour {
 
 	void OnTriggerExit2D (Collider2D other) {
 		
-		if (other.gameObject.name == "TakeOffZone" && inTakeOffZone != false) 
+		if (other.gameObject.name == "StartZone" || other.gameObject.name == "LandingZone"  && inSaveZone != false) 
 		{ 
 			Debug.Log("Exited SaveZone");
-			inTakeOffZone = false; 
+			inSaveZone = false; 
 			return;
 		} 
 		
@@ -59,7 +59,7 @@ public class SpaceshipController : MonoBehaviour {
 	void OnCollisionEnter2D (Collision2D other)
 	{
 
-		if (inTakeOffZone == true) return;
+		if (inSaveZone == true) return;
 
 		gameInfo.gameStatus = 3;	
 		Instantiate(explosionPrefab, transform.position, transform.rotation);
