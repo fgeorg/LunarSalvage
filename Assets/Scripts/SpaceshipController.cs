@@ -8,8 +8,6 @@ public class SpaceshipController : MonoBehaviour {
 	public InputParser inputParser;
 	public ThrusterRenderer leftThruster;
 	public ThrusterRenderer rightThruster;
-	[SerializeField] public GameInfo gameInfo;
-	[SerializeField] public GameObject explosionPrefab;
 
 	[SerializeField] private bool inTakeOffZone = true;
 	void OnStart()
