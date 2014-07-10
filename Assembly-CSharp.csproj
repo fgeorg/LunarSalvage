@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CameraPanning.cs" />
      <Compile Include="Assets\Ferr\2D\Scripts\Ferr2D_Animator.cs" />
      <Compile Include="Assets\Ferr\2D\Scripts\Ferr2D_IPath.cs" />
      <Compile Include="Assets\Ferr\2D\Scripts\Ferr2D_Path.cs" />
@@ -73,12 +72,13 @@
      <Compile Include="Assets\Ferr\2DTerrain\Scripts\LibTessDotNet\Tess.cs" />
      <Compile Include="Assets\Ferr\Common\Ferr_Color.cs" />
      <Compile Include="Assets\Ferr\Common\Ferr_JSON.cs" />
-     <Compile Include="Assets\GameGUI.cs" />
-     <Compile Include="Assets\GameInfo.cs" />
-     <Compile Include="Assets\Images\CrashTrigger.cs" />
-     <Compile Include="Assets\Images\SavedObjectTrigger.cs" />
-     <Compile Include="Assets\Magnetic.cs" />
-     <Compile Include="Assets\MouseFollower.cs" />
+     <Compile Include="Assets\Scripts\CameraPanning.cs" />
+     <Compile Include="Assets\Scripts\GameGUI.cs" />
+     <Compile Include="Assets\Scripts\GameInfo.cs" />
+     <Compile Include="Assets\Scripts\Magnetic.cs" />
+     <Compile Include="Assets\Scripts\MouseFollower.cs" />
+     <Compile Include="Assets\Scripts\SavedObjectTrigger.cs" />
+     <Compile Include="Assets\Scripts\SpaceshipController.cs" />
      <None Include="Assets\Ferr\2DTerrain\Examples\Assets\Materials\UnitColoredTransparent.shader" />
      <None Include="Assets\Ferr\Docs\Ferr2DTerrainTool - Readme.txt" />
      <None Include="Assets\Ferr\2DTerrain\Examples\Assets\Materials\UnlitColored.shader" />

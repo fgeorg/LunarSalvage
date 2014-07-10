@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CrashTrigger : MonoBehaviour {
+public class SpaceshipController : MonoBehaviour {
 
 	[SerializeField] public GameInfo gameInfo;
 	[SerializeField] public GameObject explosionPrefab;
