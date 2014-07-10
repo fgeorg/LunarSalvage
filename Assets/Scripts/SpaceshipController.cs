@@ -34,11 +34,10 @@ public class SpaceshipController : MonoBehaviour {
 	
 	void OnTriggerEnter2D (Collider2D other) {
 		
-		if (other.gameObject.name == "LandingZone" && inSaveZone != true) 
+		if (other.gameObject.name == "LandingZone") 
 		{
 			Debug.Log("Entered SaveZone");
 			inSaveZone = true; 
-			return;
 		} 
 
 		
@@ -46,11 +45,10 @@ public class SpaceshipController : MonoBehaviour {
 
 	void OnTriggerExit2D (Collider2D other) {
 		
-		if (other.gameObject.name == "StartZone" || other.gameObject.name == "LandingZone"  && inSaveZone != false) 
+		if ((other.gameObject.name == "StartZone" || other.gameObject.name == "LandingZone")) 
 		{ 
 			Debug.Log("Exited SaveZone");
 			inSaveZone = false; 
-			return;
 		} 
 		
 	}
@@ -58,8 +56,7 @@ public class SpaceshipController : MonoBehaviour {
 
 	void OnCollisionEnter2D (Collision2D other)
 	{
-
-		if (inSaveZone == true) return;
+		if (inSaveZone) return;
 
 		gameInfo.gameStatus = 3;	
 		Instantiate(explosionPrefab, transform.position, transform.rotation);
