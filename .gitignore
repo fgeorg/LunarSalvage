@@ -39,3 +39,5 @@ Thumbs.db
 /Assembly-CSharp-vs.csproj
 
 /Assembly-CSharp.csproj
+
+*.apk
