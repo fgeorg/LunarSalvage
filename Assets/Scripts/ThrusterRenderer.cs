@@ -15,6 +15,8 @@ public class ThrusterRenderer : MonoBehaviour {
 		{
 			particles.startColor = Color.Lerp(Color.yellow, Color.red, Random.value);
 			particles.Emit(3);
+			particles.startSpeed = 10 + thrust * 20;
+			particles.startSize = .5f + thrust * .5f;
 		}
 		fireSprite.renderer.enabled = thrust > 0;
 	}

@@ -3,6 +3,8 @@
 public class InputParser : MonoBehaviour {
 	public float leftThrust;
 	public float rightThrust;
+	private bool leftThrustOn;
+	private bool rightThrustOn;
 
 	// Use this for initialization
 	void Start () {
@@ -11,38 +13,57 @@ public class InputParser : MonoBehaviour {
 	void Update () {
 #if UNITY_Android
 		
-		leftThrust = 0;
-		rightThrust = 0;
-		var fingerCount = 0;
+		leftThrustOn = false;
+		rightThrustOn = false;
 		foreach (Touch touch in Input.touches) {
 			if (touch.position.x > Screen.currentResolution.width / 2)
 			{
-				rightThrust = 1;
+				rightThrustOn = true;
 			}
 			else
 			{
-				leftThrust = 1;
+				leftThrustO = true;
 			}
 		}
 #else
 		if (Input.GetKeyDown (KeyCode.A))
 		{
-			leftThrust = 1;
+			leftThrustOn = true;
 		}
 		if (Input.GetKeyUp (KeyCode.A))
 		{
-			leftThrust = 0;
+			leftThrustOn = false;
 		}
 		if (Input.GetKeyDown (KeyCode.D))
 		{
-			rightThrust = 1;
+			rightThrustOn = true;
 		}
 		if (Input.GetKeyUp (KeyCode.D))
 		{
-			rightThrust = 0;
+			rightThrustOn = false;
 		}
 #endif
+	}
 
+	void FixedUpdate () {
+		if (rightThrustOn)
+		{
+			rightThrust += .02f;
+			rightThrust = Mathf.Clamp01(rightThrust);
+		}
+		else
+		{
+			rightThrust = 0;
+		}
+		if (leftThrustOn)
+		{
+			leftThrust += .02f;
+			leftThrust = Mathf.Clamp01(leftThrust);
+		}
+		else
+		{
+			leftThrust = 0;
+		}
 	}
 
 	// Prints number of fingers touching the screen
