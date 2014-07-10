@@ -3,18 +3,34 @@ using System.Collections;
 
 public class GameInfo : MonoBehaviour {
 
-	[SerializeField] public int gameStatus = 0; //0 Paused,1 Running,2 Won, 3 Lost
-	[SerializeField] public int nJunkCollected = 0;
+	public int gameStatus = 0; //0 Paused,1 Running,2 Won, 3 Lost
+	public int nJunkCollected = 0;
+	public int score = 00000;
+
+	public string currentLevel;
+	public string nextLevel;
+
+	public float minutes;
+	public float seconds;
+
+	private float timer;
+
 
 	// Use this for initialization
 	void Start () 
 	{
-		gameStatus = 1;
+		gameStatus = 4;
+		Time.timeScale = 0;
+		currentLevel = Application.loadedLevelName;
+
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-	
+		timer +=Time.deltaTime;
+
+		 minutes = Mathf.Floor(timer / 60);
+		 seconds = timer%60;
 	}
 }
