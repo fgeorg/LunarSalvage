@@ -25,6 +25,17 @@ public class InputParser : MonoBehaviour {
 		{
 			rightThrust = 0;
 		}
+//
+//		var fingerCount = 0;
+//		foreach (Touch touch in Input.touches) {
+//			if (touch.position.x > Screen.currentResolution.width / 2)
+//			{
+//			}
+//
+////			if (touch.phase != TouchPhase.Ended && touch.phase != TouchPhase.Canceled)
+//		}
+//		if (fingerCount > 0)
+//			print ("User has " + fingerCount + " finger(s) touching the screen");
 	}
 
 	// Prints number of fingers touching the screen
