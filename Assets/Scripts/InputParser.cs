@@ -9,6 +9,22 @@ public class InputParser : MonoBehaviour {
 	}
 	
 	void Update () {
+#if UNITY_Android
+		
+		leftThrust = 0;
+		rightThrust = 0;
+		var fingerCount = 0;
+		foreach (Touch touch in Input.touches) {
+			if (touch.position.x > Screen.currentResolution.width / 2)
+			{
+				rightThrust = 1;
+			}
+			else
+			{
+				leftThrust = 1;
+			}
+		}
+#else
 		if (Input.GetKeyDown (KeyCode.A))
 		{
 			leftThrust = 1;
@@ -25,17 +41,8 @@ public class InputParser : MonoBehaviour {
 		{
 			rightThrust = 0;
 		}
-//
-//		var fingerCount = 0;
-//		foreach (Touch touch in Input.touches) {
-//			if (touch.position.x > Screen.currentResolution.width / 2)
-//			{
-//			}
-//
-////			if (touch.phase != TouchPhase.Ended && touch.phase != TouchPhase.Canceled)
-//		}
-//		if (fingerCount > 0)
-//			print ("User has " + fingerCount + " finger(s) touching the screen");
+#endif
+
 	}
 
 	// Prints number of fingers touching the screen
