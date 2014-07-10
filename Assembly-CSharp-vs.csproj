@@ -83,6 +83,7 @@
      <Compile Include="Assets\Scripts\SpaceshipController.cs" />
      <Compile Include="Assets\Scripts\StarTwinkle.cs" />
      <Compile Include="Assets\Scripts\ThrusterRenderer.cs" />
+     <Compile Include="Assets\Sounds\backgroundSound.cs" />
      <Compile Include="Assets\StartPlattform.cs" />
      <None Include="Assets\Ferr\2DTerrain\Examples\Assets\Materials\UnitColoredTransparent.shader" />
      <None Include="Assets\Ferr\Docs\Ferr2DTerrainTool - Readme.txt" />
