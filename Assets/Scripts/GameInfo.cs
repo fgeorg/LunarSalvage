@@ -20,7 +20,7 @@ public class GameInfo : MonoBehaviour {
 	void Start () 
 	{
 		gameStatus = 4;
-		Time.timeScale = 0;
+		Time.timeScale = 1;
 		currentLevel = Application.loadedLevelName;
 
 	}

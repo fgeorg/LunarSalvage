@@ -2,10 +2,8 @@
 using System.Collections;
 
 public class CableRenderer : MonoBehaviour {
-	public DistanceJoint2D joint;
+	public CablePhysics cablePhysics;
 	public LineRenderer lineRenderer;
-	public GameObject spaceShip;
-	public GameObject magnet;
 	// Use this for initialization
 	void Start () {
 	
@@ -13,8 +11,8 @@ public class CableRenderer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Vector3 from = spaceShip.transform.position + spaceShip.transform.TransformVector (joint.anchor + new Vector2 (0, 1));
-		Vector3 to = magnet.transform.position + magnet.transform.TransformVector (joint.connectedAnchor + new Vector2 (0, -1));
+		Vector3 from = cablePhysics.body1.transform.position + cablePhysics.body1.transform.TransformVector (cablePhysics.body1Anchor + new Vector2 (0, 1));
+		Vector3 to = cablePhysics.body2.transform.position + cablePhysics.body2.transform.TransformVector (cablePhysics.body2Anchor + new Vector2 (0, -1));
 		float dst = (to - from).magnitude;
 		float size = 1.0f - dst * 0.05f;
 		lineRenderer.SetWidth (size, size);
