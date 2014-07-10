@@ -16,19 +16,18 @@ public class SpaceshipController : MonoBehaviour {
 	}
 	
 	void FixedUpdate() {
-		Vector3 force = new Vector3();
 		if (inputParser.leftThrust > 0)
 		{
-			force += new Vector3(10, 20, 0);
+			rigidbody2D.AddForceAtPosition (leftThruster.transform.rotation * new Vector2 (0, 2), leftThruster.transform.position);
+			rigidbody2D.AddForce (transform.rotation * new Vector2 (0, 15));
 		}
 		if (inputParser.rightThrust > 0)
 		{
-			force += new Vector3(-10, 20, 0);
+			rigidbody2D.AddForceAtPosition (rightThruster.transform.rotation * new Vector2 (0, 2), rightThruster.transform.position);
+			rigidbody2D.AddForce (transform.rotation * new Vector2 (0, 15));
 		}
 		leftThruster.thrust = inputParser.leftThrust;
 		rightThruster.thrust = inputParser.rightThrust;
-
-		rigidbody2D.AddForce(force);
 	}
 	
 	void OnTriggerEnter2D (Collider2D other) {
