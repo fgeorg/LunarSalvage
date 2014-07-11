@@ -23,13 +23,15 @@ public class MainMenuGUI : MonoBehaviour {
 	{
 		GUI.skin = menuSkin;
 
-		GUI.Label(new Rect(screenWidth*0.5f,screenHeight*0.1f,screenWidth,screenHeight), "Welcome to Lunar Scrap yard!");
+		GUI.Label(new Rect(0,screenHeight*0.05f,screenWidth,screenHeight), "Welcome to Lunar Scrap yard!");
 
-		if(GUI.Button(new Rect(screenWidth*0.5f,screenHeight*0.5f,200,200), "PLAY")) {
+		if(GUI.Button(new Rect(screenWidth*0.5f -200 ,screenHeight*0.5f -100,400,200), "PLAY")) {
 			Application.LoadLevel("Level");
 		}
 
-		GUI.Box(new Rect(screenWidth*0.5f,screenHeight*0.8f,1000,100), "Collect Scrap to earn points!");
+		GUI.Box(new Rect(screenWidth/2 - (screenWidth * 0.3f)/2,screenHeight*0.15f,screenWidth * 0.3f,screenHeight * 0.1f), "Collect Scrap to earn points!!");
+
+
 
 		}
 	}

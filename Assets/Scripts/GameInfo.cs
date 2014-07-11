@@ -22,7 +22,7 @@ public class GameInfo : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		gameStatus = 4;
+		gameStatus = 1;
 		Time.timeScale = 1;
 		currentLevel = Application.loadedLevelName;
 

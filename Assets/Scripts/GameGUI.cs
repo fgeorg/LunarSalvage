@@ -24,14 +24,14 @@ public class GameGUI : MonoBehaviour {
 
 		switch (gameInfo.gameStatus) {
 		case 0: // paused
-			GUI.Label(new Rect(screenWidth*0.525f,screenHeight*0.1f,300,90), "Paused");
-			if(GUI.Button(new Rect(screenWidth*0.45f,screenHeight*0.15f,100,100), "Resume")) {
+			GUI.Label(new Rect(screenWidth*0.5f - 450/2 ,screenHeight*0.1f,450,90), "Paused");
+			if(GUI.Button(new Rect(screenWidth*0.5f - 400/2 ,screenHeight*0.15f,400,100), "Resume")) {
 				gameInfo.gameStatus = 1;
 				Time.timeScale = 1;
 			}
 			
-			if(GUI.Button(new Rect(screenWidth*0.55f,screenHeight*0.15f,100,100), "Restart")) {
-				Application.LoadLevel(gameInfo.currentLevel);
+			if(GUI.Button(new Rect(screenWidth*0.5f - 200,screenHeight*0.25f,400,100), "Restart")) {
+				Application.LoadLevel("MainMenu");
 				Time.timeScale = 1;
 			}
 			break;
@@ -61,38 +61,38 @@ public class GameGUI : MonoBehaviour {
 
 			break;
 		case 2: // won
-			GUI.Label(new Rect(screenWidth*0.525f,screenHeight*0.1f,300,90), "You Won!");
+			GUI.Label(new Rect(screenWidth*0.5f - 150,screenHeight*0.1f,300,90), "You Won!");
 
-			if(GUI.Button(new Rect(screenWidth*0.45f,screenHeight*0.15f,100,100), "Again!")) {
+			if(GUI.Button(new Rect(screenWidth*0.5f - 100,screenHeight*0.15f,200,100), "Again!")) {
 				Application.LoadLevel(gameInfo.currentLevel);
 			}
 			
-			if(GUI.Button(new Rect(screenWidth*0.55f,screenHeight*0.15f,100,100), "Next")) {
-				//Application.LoadLevel(2);
+			if(GUI.Button(new Rect(screenWidth*0.5f - 100,screenHeight*0.25f,200,100), "Quit")) {
+				Application.LoadLevel("MainMenu");
 			}
 			break;
 
 		case 3: // lost
-			GUI.Label(new Rect(screenWidth*0.525f,screenHeight*0.1f,300,90), "You Lost!");
+			GUI.Label(new Rect(screenWidth*0.5f - 150,screenHeight*0.1f,300,90), "GAME OVER");
 
-			if(GUI.Button(new Rect(screenWidth*0.45f,screenHeight*0.15f,100,100), "Retry")) {
+			if(GUI.Button(new Rect(screenWidth*0.5f - 100,screenHeight*0.15f,200,100), "Retry")) {
 				Application.LoadLevel(gameInfo.currentLevel);
 			}
 			
-			if(GUI.Button(new Rect(screenWidth*0.55f,screenHeight*0.15f,100,100), "Quit")) {
+			if(GUI.Button(new Rect(screenWidth*0.5f - 100,screenHeight*0.25f,200,100), "Quit")) {
 				Application.LoadLevel("MainMenu");
 			}
 			break;
 
 		case 4: // started
-			GUI.Label(new Rect(screenWidth*0.525f,screenHeight*0.1f,300,90), ""+gameInfo.currentLevel);
+			GUI.Label(new Rect(screenWidth*0.5f - 150,screenHeight*0.1f,300,90), ""+gameInfo.currentLevel);
 			
-			if(GUI.Button(new Rect(screenWidth*0.45f,screenHeight*0.15f,100,100), "Start")) {
+			if(GUI.Button(new Rect(screenWidth*0.5f - 100,screenHeight*0.15f,200,100), "Start")) {
 				gameInfo.gameStatus=1;
 				Time.timeScale = 1;
 			}
 			
-			if(GUI.Button(new Rect(screenWidth*0.55f,screenHeight*0.15f,100,100), "Quit")) {
+			if(GUI.Button(new Rect(screenWidth*0.5f - 100,screenHeight*0.25f,200,100), "Quit")) {
 				Application.LoadLevel("MainMenu");
 			}
 			break;
