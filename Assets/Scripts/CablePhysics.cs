@@ -23,15 +23,15 @@ public class CablePhysics : MonoBehaviour {
 		if (mag == 0) return;
 		dir.Normalize ();
 		if (mag > distance) {
-			float strength = .2f * (mag * mag - distance * distance);
-			if (strength > 50) strength = 50; 
+			float strength = .25f * (mag * mag - distance * distance);
+			if (strength > 60) strength = 60; 
 			body1.AddForceAtPosition(strength * dir, pos1);
 			body2.AddForceAtPosition(strength * -dir, pos2);
 		}
 		else
 		{
-			body1.AddForceAtPosition((.2f + (distance - mag)) * -dir, pos1);
-			body2.AddForceAtPosition((.2f + (distance - mag)) * dir, pos2);
+			body1.AddForceAtPosition((.4f + (distance - mag)) * -dir, pos1);
+			body2.AddForceAtPosition((.4f + (distance - mag)) * dir, pos2);
 		}
 	}
 }

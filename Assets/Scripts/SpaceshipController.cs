@@ -21,12 +21,18 @@ public class SpaceshipController : MonoBehaviour {
 		{
 			rigidbody2D.AddForceAtPosition (leftThruster.transform.rotation * new Vector2 (0, inputParser.leftThrust * 1.0f), leftThruster.transform.position);
 			rigidbody2D.AddForce (transform.rotation * new Vector2 (0, inputParser.leftThrust * 25));
-//			rigidbody2D.AddForce (new Vector2 (0, 1));
+			rigidbody2D.AddForce (transform.rotation * new Vector2 (inputParser.leftThrust * 50.0f, 0));
+//			rigidbody2D.AddForce (new Vector2 (0, 10.0f));
+
+			//			rigidbody2D.AddForce (new Vector2 (0, 1));
 		}
 		if (inputParser.rightThrust > 0)
 		{
 			rigidbody2D.AddForceAtPosition (rightThruster.transform.rotation * new Vector2 (0, inputParser.rightThrust * 1.0f), rightThruster.transform.position);
 			rigidbody2D.AddForce (transform.rotation * new Vector2 (0, inputParser.rightThrust * 25));
+			rigidbody2D.AddForce (transform.rotation * new Vector2 (inputParser.rightThrust * -50.0f, 0));
+//			rigidbody2D.AddForce (new Vector2 (0, 10.0f));
+
 //			rigidbody2D.AddForce (new Vector2 (0, 1));
 		}
 		leftThruster.thrust = inputParser.leftThrust;
