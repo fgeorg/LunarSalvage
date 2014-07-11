@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Magnetic : MonoBehaviour {
+public class Magnetic : MonoBehaviour
+{
 	private GameObject magnet;
+
 	void Start () {
 		magnet = GameObject.FindGameObjectWithTag ("Magnet");
 	}
