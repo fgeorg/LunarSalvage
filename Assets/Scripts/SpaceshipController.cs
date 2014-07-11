@@ -22,13 +22,24 @@ public class SpaceshipController : MonoBehaviour {
 			rigidbody2D.AddForceAtPosition (leftThruster.transform.rotation * new Vector2 (0, inputParser.leftThrust * 1.0f), leftThruster.transform.position);
 			rigidbody2D.AddForce (transform.rotation * new Vector2 (0, inputParser.leftThrust * 25));
 //			rigidbody2D.AddForce (new Vector2 (0, 1));
+
+			if (!gameObject.GetComponent<AudioSource>().isPlaying)
+			gameObject.GetComponent<AudioSource>().Play();
+
 		}
 		if (inputParser.rightThrust > 0)
 		{
 			rigidbody2D.AddForceAtPosition (rightThruster.transform.rotation * new Vector2 (0, inputParser.rightThrust * 1.0f), rightThruster.transform.position);
 			rigidbody2D.AddForce (transform.rotation * new Vector2 (0, inputParser.rightThrust * 25));
 //			rigidbody2D.AddForce (new Vector2 (0, 1));
+
+			if (!gameObject.GetComponent<AudioSource>().isPlaying)
+			gameObject.GetComponent<AudioSource>().Play();
 		}
+
+		if(inputParser.leftThrust == 0 && inputParser.rightThrust == 0)
+			gameObject.GetComponent<AudioSource>().Stop();
+
 		leftThruster.thrust = inputParser.leftThrust;
 		rightThruster.thrust = inputParser.rightThrust;
 
