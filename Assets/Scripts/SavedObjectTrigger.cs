@@ -17,6 +17,7 @@ public class SavedObjectTrigger : MonoBehaviour
 		{
 			Destroy(other.gameObject);
 			gameInfo.nJunkCollected++;
+			gameInfo.PointsCollectedFromJunk(junk.Size);
 			if (gameInfo.nJunkCollected >= 3)
 			{
 				gameInfo.gameStatus = 2;	

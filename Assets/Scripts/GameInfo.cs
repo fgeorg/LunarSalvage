@@ -33,4 +33,11 @@ public class GameInfo : MonoBehaviour {
 		 minutes = Mathf.Floor(timer / 60);
 		 seconds = timer%60;
 	}
+
+	public void PointsCollectedFromJunk(float size)
+	{
+		var points = Mathf.Lerp(20, 80, size);
+		var extraTime = Mathf.Lerp(5, 10, size);
+		Debug.Log("collected points: " + points + " extraTime: " + extraTime);
+	}
 }

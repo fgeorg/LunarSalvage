@@ -23,6 +23,8 @@ public class JunkController : MonoBehaviour
 		{
 			GameObject go = (GameObject)Instantiate(JunkPrefab, GetRandomSpawnerPosition(), transform.rotation);
 			go.transform.parent = this.transform;
+			var magnetic = go.GetComponentInChildren<Magnetic>();
+			magnetic.Size = Random.value;
 		}
 	}
 

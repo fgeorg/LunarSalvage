@@ -3,7 +3,29 @@ using System.Collections;
 
 public class Magnetic : MonoBehaviour
 {
+	private const float MIN_SIZE_JUNK = 0.3f;
+	private const float MAX_SIZE_JUNK = 1f;
+	private const float MIN_MASS_JUNK = 0.3f;
+	private const float MAX_MASS_JUNK = 1f;
 	private GameObject magnet;
+	private float _size;
+	public float Size
+	{
+		get { return _size; }
+		set
+		{
+			_size = value;
+			AdjustBoxToSize();
+		}
+	}
+
+	private void AdjustBoxToSize()
+	{
+		var size = Mathf.Lerp(MIN_SIZE_JUNK, MAX_SIZE_JUNK, _size);
+		this.gameObject.transform.localScale = new Vector3(size, size, size);
+		var rigidBody = this.GetComponent<Rigidbody2D>();
+		rigidBody.mass = Mathf.Lerp(MIN_MASS_JUNK, MAX_MASS_JUNK, _size);
+	}
 
 	void Start () {
 		magnet = GameObject.FindGameObjectWithTag ("Magnet");
