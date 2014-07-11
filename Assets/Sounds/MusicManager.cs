@@ -26,6 +26,7 @@ public class MusicManager : MonoBehaviour {
 		audioList = this.gameObject.GetComponents<AudioSource>();
 		nextClipTime = (float)currentClip.clip.length;
 
+		if(nextClip == null)
 		checkNextClip();
 	
 	}
