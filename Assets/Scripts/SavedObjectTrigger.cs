@@ -12,7 +12,8 @@ public class SavedObjectTrigger : MonoBehaviour
 
 	void OnCollisionEnter2D (Collision2D other)
 	{
-		if(other.gameObject.name == "Junk")
+		var junk = other.gameObject.GetComponentInChildren<Magnetic>();
+		if (junk != null)
 		{
 			Destroy(other.gameObject);
 			gameInfo.nJunkCollected++;

@@ -1,10 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Magnetic : MonoBehaviour {
+public class Magnetic : MonoBehaviour
+{
+	private const float HEIGHT_TO_PICKUP = 5f;
 	private GameObject magnet;
+	public Vector3 InitialPosition;
+	public bool ObjectIsPickedUp;
+
 	void Start () {
 		magnet = GameObject.FindGameObjectWithTag ("Magnet");
+		InitialPosition = this.transform.position;
+		ResetObject();
 	}
 	
 	void FixedUpdate () {
@@ -19,5 +26,14 @@ public class Magnetic : MonoBehaviour {
 			rigidbody2D.AddForce(force);
 			magnet.rigidbody2D.AddForce(-force);
 		}
+		if (transform.position.y > InitialPosition.y + HEIGHT_TO_PICKUP)
+		{
+			ObjectIsPickedUp = true;
+		}
+	}
+
+	public void ResetObject()
+	{
+		ObjectIsPickedUp = false;
 	}
 }
