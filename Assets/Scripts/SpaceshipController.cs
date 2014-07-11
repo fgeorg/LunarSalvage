@@ -10,6 +10,7 @@ public class SpaceshipController : MonoBehaviour {
 	public ThrusterRenderer rightThruster;
 
 	public bool inSaveZone = true;
+
 	void OnStart()
 	{
 		
@@ -30,6 +31,9 @@ public class SpaceshipController : MonoBehaviour {
 		}
 		leftThruster.thrust = inputParser.leftThrust;
 		rightThruster.thrust = inputParser.rightThrust;
+
+		gameInfo.verticalSpeed   = (int)gameObject.GetComponent<Rigidbody2D> ().velocity.y;
+		gameInfo.horizontalSpeed = (int)gameObject.GetComponent<Rigidbody2D> ().velocity.x;
 	}
 	
 	void OnTriggerEnter2D (Collider2D other) {

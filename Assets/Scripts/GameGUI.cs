@@ -39,6 +39,9 @@ public class GameGUI : MonoBehaviour {
 
 			//HUD
 			GUI.Label(new Rect(120,10,300,40), "Score: "+ gameInfo.score);
+			GUI.Label(new Rect(320,10,600,40), "Horizontal Speed: "+ gameInfo.horizontalSpeed);
+			GUI.Label(new Rect(320,50,600,40), "Vertical Speed: "+ gameInfo.verticalSpeed);
+
 
 			if (gameInfo.minutes <= 0)
 			{
@@ -47,6 +50,8 @@ public class GameGUI : MonoBehaviour {
 			}
 			else
 			GUI.Label(new Rect(120,50,600,40), "Time: "+ gameInfo.minutes +":"+gameInfo.seconds);
+
+
 
 
 			break;

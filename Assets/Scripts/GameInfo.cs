@@ -13,6 +13,9 @@ public class GameInfo : MonoBehaviour {
 	public float minutes;
 	public float seconds;
 
+	public int horizontalSpeed;
+	public int verticalSpeed;
+
 	private float timer;
 
 
