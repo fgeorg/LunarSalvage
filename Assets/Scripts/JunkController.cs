@@ -4,7 +4,7 @@ using System.Collections;
 
 public class JunkController : MonoBehaviour
 {
-	private const int MAX_AMOUNT_JUNK = 10;
+	private const int MAX_AMOUNT_JUNK = 20;
 	private Magnetic[] junks;
 	private JunkSpawning[] spawners;
 	public GameObject JunkPrefab;
