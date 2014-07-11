@@ -42,5 +42,7 @@ public class GameInfo : MonoBehaviour {
 		var points = Mathf.Lerp(20, 80, size);
 		var extraTime = Mathf.Lerp(5, 10, size);
 		Debug.Log("collected points: " + points + " extraTime: " + extraTime);
+
+		score += (int)points;
 	}
 }
