@@ -19,7 +19,7 @@ public class MainMenuGUI : MonoBehaviour {
 		GUI.Label(new Rect(160,10,800,100), "Welcome to Lunar Scrap yard!");
 
 		if(GUI.Button(new Rect(410,100,200,200), "PLAY")) {
-			Application.LoadLevel("Level1");
+			Application.LoadLevel("Level");
 		}
 
 		GUI.Box(new Rect(0,300,1000,100), "Collect Scrap to earn points!");
