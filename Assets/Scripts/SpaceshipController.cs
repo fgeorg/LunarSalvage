@@ -25,6 +25,8 @@ public class SpaceshipController : MonoBehaviour {
 //			rigidbody2D.AddForce (new Vector2 (0, 10.0f));
 
 			//			rigidbody2D.AddForce (new Vector2 (0, 1));
+			if (!gameObject.GetComponent<AudioSource>().isPlaying)
+				gameObject.GetComponent<AudioSource>().Play();
 		}
 		if (inputParser.rightThrust > 0)
 		{
@@ -34,12 +36,21 @@ public class SpaceshipController : MonoBehaviour {
 //			rigidbody2D.AddForce (new Vector2 (0, 10.0f));
 
 //			rigidbody2D.AddForce (new Vector2 (0, 1));
+			
+			if (!gameObject.GetComponent<AudioSource>().isPlaying)
+				gameObject.GetComponent<AudioSource>().Play();
 		}
+		
+		if(inputParser.leftThrust == 0 && inputParser.rightThrust == 0)
+			gameObject.GetComponent<AudioSource>().Stop();
+		
 		leftThruster.thrust = inputParser.leftThrust;
 		rightThruster.thrust = inputParser.rightThrust;
 
 		gameInfo.verticalSpeed   = (int)gameObject.GetComponent<Rigidbody2D> ().velocity.y;
 		gameInfo.horizontalSpeed = (int)gameObject.GetComponent<Rigidbody2D> ().velocity.x;
+
+
 	}
 	
 	void OnTriggerEnter2D (Collider2D other) {
@@ -66,8 +77,10 @@ public class SpaceshipController : MonoBehaviour {
 
 	void OnCollisionEnter2D (Collision2D other)
 	{
-		if (inSaveZone) return;
-
+//		if (inSaveZone) return;
+		if (other.gameObject.name == "Magnet") return;
+//		var junk = other.gameObject.GetComponentsInChildren<Magnetic> ();
+//		if (junk != null) return;
 		gameInfo.gameStatus = 3;	
 		Instantiate(explosionPrefab, transform.position, transform.rotation);
 		Destroy (gameObject);
