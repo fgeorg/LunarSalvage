@@ -30,8 +30,8 @@ public class CablePhysics : MonoBehaviour {
 		}
 		else
 		{
-			body1.AddForceAtPosition((.4f + (distance - mag)) * -dir, pos1);
-			body2.AddForceAtPosition((.4f + (distance - mag)) * dir, pos2);
+			body1.AddForceAtPosition((.2f + (distance - mag)) * -dir, pos1);
+			body2.AddForceAtPosition((.2f + (distance - mag)) * dir, pos2);
 		}
 	}
 }

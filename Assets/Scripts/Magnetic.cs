@@ -4,9 +4,9 @@ using System.Collections;
 public class Magnetic : MonoBehaviour
 {
 	private const float MIN_SIZE_JUNK = 0.6f;
-	private const float MAX_SIZE_JUNK = 1.8f;
-	private const float MIN_MASS_JUNK = 0.3f;
-	private const float MAX_MASS_JUNK = 1f;
+	private const float MAX_SIZE_JUNK = 1.6f;
+	private const float MIN_MASS_JUNK = 0.2f;
+	private const float MAX_MASS_JUNK = 0.6f;
 	private GameObject magnet;
 	private float _size;
 	public float Size
@@ -40,7 +40,7 @@ public class Magnetic : MonoBehaviour
 		{
 			float magnitude = diff.magnitude;
 			magnitude = Mathf.Pow(magnitude, 3);
-			magnitude = 5000.0f * 1.0f / (magnitude);
+			magnitude = 2000.0f * 1.0f / (magnitude);
 			Vector2 force = diff.normalized * magnitude;
 			rigidbody2D.AddForce(force);
 			magnet.rigidbody2D.AddForce(-force);
