@@ -70,7 +70,7 @@ public class GameGUI : MonoBehaviour {
 			}
 			
 			if(GUI.Button(new Rect(550,150,100,100), "Quit")) {
-				//Application.LoadLevel(2);
+				Application.LoadLevel("MainMenu");
 			}
 			break;
 
@@ -83,7 +83,7 @@ public class GameGUI : MonoBehaviour {
 			}
 			
 			if(GUI.Button(new Rect(550,150,100,100), "Quit")) {
-				//Application.LoadLevel(2);
+				Application.LoadLevel("MainMenu");
 			}
 			break;
 
