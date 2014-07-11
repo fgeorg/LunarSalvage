@@ -4,7 +4,7 @@ using System.Collections;
 
 public class JunkSpawning : MonoBehaviour
 {
-	private const float distance = 25;
+	private const float distance = 9;
 	public GameObject SpawningPlatform;
 	// Use this for initialization
 	void Start ()

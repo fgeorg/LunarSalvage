@@ -29,9 +29,12 @@ public class JunkController : MonoBehaviour
 	private Vector3 GetRandomSpawnerPosition()
 	{
 		var index = Random.Range(0, spawners.Length);
-		while (!spawners[index].IsPlatformFree(junks))
+		if (junks != null && junks.Length > 0)
 		{
-			index = Random.Range(0, spawners.Length);
+			while (!spawners[index].IsPlatformFree(junks))
+			{
+				index = Random.Range(0, spawners.Length);
+			}
 		}
 		return spawners[index].transform.position;
 	}
