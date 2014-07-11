@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Magnetic : MonoBehaviour
 {
-	private const float MIN_SIZE_JUNK = 0.3f;
-	private const float MAX_SIZE_JUNK = 1f;
+	private const float MIN_SIZE_JUNK = 0.6f;
+	private const float MAX_SIZE_JUNK = 1.8f;
 	private const float MIN_MASS_JUNK = 0.3f;
 	private const float MAX_MASS_JUNK = 1f;
 	private GameObject magnet;
