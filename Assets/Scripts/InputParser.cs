@@ -5,17 +5,20 @@ public class InputParser : MonoBehaviour {
 	public float rightThrust;
 	private bool leftThrustOn;
 	private bool rightThrustOn;
-
+	private bool useTouch = false;
 	// Use this for initialization
 	void Start () {
 	}
 	
 	void Update () {
-#if UNITY_ANDROID
-		
-		leftThrustOn = false;
-		rightThrustOn = false;
+		if (useTouch)
+		{
+			leftThrustOn = false;
+			rightThrustOn = false;
+		}
+
 		foreach (Touch touch in Input.touches) {
+			useTouch = true;
 			if (touch.position.x > Screen.currentResolution.width / 2)
 			{
 				rightThrustOn = true;
@@ -25,9 +28,9 @@ public class InputParser : MonoBehaviour {
 				leftThrustOn = true;
 			}
 		}
-#else
 		if (Input.GetKeyDown (KeyCode.A))
 		{
+			useTouch = false;
 			leftThrustOn = true;
 		}
 		if (Input.GetKeyUp (KeyCode.A))
@@ -36,13 +39,13 @@ public class InputParser : MonoBehaviour {
 		}
 		if (Input.GetKeyDown (KeyCode.D))
 		{
+			useTouch = false;
 			rightThrustOn = true;
 		}
 		if (Input.GetKeyUp (KeyCode.D))
 		{
 			rightThrustOn = false;
 		}
-#endif
 	}
 
 	void FixedUpdate () {
