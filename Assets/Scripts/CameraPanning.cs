@@ -19,8 +19,8 @@ public class CameraPanning : MonoBehaviour {
 			camera.transform.position = new Vector3(curPos.x + toMove.x,
 			                                        curPos.y + toMove.y,
 			                                        camera.transform.position.z);
-			float targetSize = 40 + (3.5f * player.rigidbody2D.velocity.magnitude);
-			camera.orthographicSize = camera.orthographicSize * .99f + targetSize * .01f;
+//			float targetSize = 40 + (3.5f * player.rigidbody2D.velocity.magnitude);
+//			camera.orthographicSize = camera.orthographicSize * .99f + targetSize * .01f;
 		}
 
 
