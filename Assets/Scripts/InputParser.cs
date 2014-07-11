@@ -11,7 +11,7 @@ public class InputParser : MonoBehaviour {
 	}
 	
 	void Update () {
-#if UNITY_Android
+#if UNITY_ANDROID
 		
 		leftThrustOn = false;
 		rightThrustOn = false;
@@ -22,7 +22,7 @@ public class InputParser : MonoBehaviour {
 			}
 			else
 			{
-				leftThrustO = true;
+				leftThrustOn = true;
 			}
 		}
 #else
